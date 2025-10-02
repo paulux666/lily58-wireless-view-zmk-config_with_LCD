@@ -13,7 +13,7 @@
         PaulPass: PaulPass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp N &kp A &kp R &kp C &kp H &kp Y &kp EXCL &kp AT &kp POUND &kp DLLR &kp N0>;
+            bindings = <kp p>;
             label = "PAULPASS";
         };
 
