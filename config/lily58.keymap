@@ -9,6 +9,22 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        PaulPass: PaulPass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(A) &kp N &kp A &kp R &kp C &kp H &kp Y &kp EXCL &kp AT &kp POUND &kp DLLR &kp N0>;
+            label = "PAULPASS";
+        };
+
+        WinLock: WinLock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp L>;
+            label = "WINLOCK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -58,10 +74,10 @@
 
             display-name = "Raise";
             bindings = <
-&none   &none   &none   &none    &none    &none                    &kp C_VOLUME_UP  &none  &none  &none  &none  &none
-&none   &none   &none   &none    &none    &none                    &kp C_VOL_DN     &none  &none  &none  &none  &none
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &kp K_MUTE       &none  &none  &none  &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &none    &none  &none            &none  &none  &none  &none  &none
+&none   &none   &none   &none    &none    &none                    &kp C_VOLUME_UP  &none  &none  &none  &PaulPass  &WinLock
+&none   &none   &none   &none    &none    &none                    &kp C_VOL_DN     &none  &none  &none  &none      &none
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                   &kp K_MUTE       &none  &none  &none  &none      &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &none    &none  &none            &none  &none  &none  &none      &none
                         &none    &none    &none    &none    &none  &none            &none  &none
             >;
         };
