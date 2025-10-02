@@ -60,7 +60,7 @@
 &none         &none         &none           &none           &none            &none                                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp DELETE     &kp END
 &kp TAB       &none         &none           &kp UP          &none            &none                                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA     &kp BACKSPACE  &kp PAGE_UP
 &kp CAPSLOCK  &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none         &kp COLON    &kp TAB       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp BACKSLASH  &kp PAGE_DOWN
-                                            &trans          &trans           &trans        &trans       &kp KP_ENTER  &trans           &kp KP_NUMBER_0  &kp KP_DOT
+                                            &trans          &trans           &tog 0        &trans       &kp KP_ENTER  &trans           &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
@@ -83,9 +83,5 @@
         };
 
         extra_1 { status = "reserved"; };
-
-        extra_2 { status = "reserved"; };
-
-        extra_3 { status = "reserved"; };
     };
 };
